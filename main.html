@@ -1,16 +1,112 @@
 <!DOCTYPE html>
-
-<html>
-
+<html lang="en">
 <head>
-	<link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Portfolio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        img {
+            transition: transform 0.3s ease-in-out;
+        }
+        img:hover {
+            transform: scale(1.2);
+        }
+        span {
+            color: rgb(255, 0, 0);
+        }
+        header, nav, main, footer {
+            padding: 20px;
+        }
+        header {
+            background-color: #000000;
+            color: rgb(84, 205, 154);
+        }
+        nav a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: rgb(0, 0, 0);
+            text-align: left;
+        }
+        footer {
+            background-color: #000000;
+            color: rgb(84, 205, 154);
+            text-align: center;
+        }
+        .card {
+            border: 2.5px solid rgb(84, 205, 154);
+            border-radius: 20px;
+            padding: 16px;
+            margin: 16px 0;
+        }
+    </style>
 </head>
-
 <body>
-	<!-- the entire body must be written by student -->
-    <script type="text/javascript" src="./script.js">
-</script>
+    <header role="banner">
+        <strong><u><span>S</span>hiv <span>K</span>umar <span>R</span>ajput</u></strong>
+        <p>Welcome to my portfolio! I am a web developer specializing in accessible design.</p>
+        <img src="https://github.com/acciojob/semantic-imdb-Mrshivrajput/blob/master/shiv%20passport%20size.jpg?raw=true" 
+           alt="Photo of Shiv Kumar Rajput" 
+           loading="lazy" width="100" height="100%" style="border-radius: 50; float: right;border: solid black;"">
+    </header>
+    <nav role="navigation" aria-label="Main Navigation">
+        <ul>
+            <li><a href="#about" role="link">About Me</a></li>
+            <li><a href="#projects" role="link">Projects</a></li>
+            <li><a href="#contact" role="link">Contact</a></li>
+        </ul>
+    </nav>
+    <main role="main">
+       <section id="about" role="region" aria-labelledby="about-heading">
+            <h2 id="about-heading"><span><b>A</b></span>bout Me</h2>
+            <p> 
+                Hello! I'm a passionate Web Developer specializing in the MERN stack 
+                (MongoDB, Express.js, React, Node.js). I thrive on building dynamic, scalable,
+                and user-friendly web applications that solve real-world problems. 
+                With a strong foundation in both front-end and back-end development, 
+                I bring ideas to life through clean code and innovative design.
+                Whether it's developing intuitive user interfaces or implementing robust APIs, 
+                I am committed to delivering high-quality solutions tailored to your needs. 
+                My goal is to create seamless digital experiences that are accessible and efficient. 
+                Let's build something amazing together!
+            </p>
+        </section>
+        <section id="projects" role="region" aria-labelledby="projects-heading">
+            <h2 id="projects-heading"><span>M</span>y Projects</h2>
+            <div class="card" role="article" aria-labelledby="project-1-title">
+                <h3 id="project-1-title">Accessible Website</h3>
+                <p>Baba ji ka thullu</p>
+            </div>
+            <div class="card" role="article" aria-labelledby="project-2-title">
+                <h3 id="project-2-title">E-commerce Platform</h3>
+                <p>Baba ji ka thullu</p>
+            </div>
+            <div class="card" role="article" aria-labelledby="project-3-title">
+                <h3 id="project-3-title">Portfolio Website</h3>
+                <p>Baba ji ka thullu</p>
+            </div> <!-- Closing div for project-3-title -->
+        </section>
+        <section id="contact" role="region" aria-labelledby="contact-heading">
+            <h2 id="contact-heading"><span>C</span>ontact Me</h2>
+            <form role="form" aria-labelledby="contact-heading">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" aria-required="true"><br><br>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" aria-required="true"><br><br>
+                <label for="message">Message:</label><br>
+                <textarea id="message" name="message" rows="4" aria-required="true"></textarea><br><br>
+                <button type="submit">Send</button>
+            </form>
+        </section>
+    </main>
 
+    <!-- Footer -->
+    <footer role="contentinfo" aria-labelledby="Footer">
+        <strong>© 2024 SKR. All rights reserved.</strong>
+    </footer>
 </body>
-
 </html>
